@@ -93,7 +93,7 @@ public class FlagHandler {
         if (XCatch.commands.containsKey(flags.get(uuid).flags)) {
             ArrayList<String> commands = XCatch.commands.get(flags.get(uuid).flags);
             for (String command : commands) {
-                Bukkit.getScheduler().runTask(XCatch.getPlugin(XCatch.class), () -> Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), Utils.replaceVariables(command, variables)));
+                XCatch.getScheduler().runTask(() -> Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), Utils.replaceVariables(command, variables)));
             }
         }
         PersistentData.data.totalFlags++;

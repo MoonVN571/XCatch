@@ -1,10 +1,11 @@
 name: XCatch
-version: '${project.version}'
+version: '1.1.4'
 main: dev.dediamondpro.xcatch.XCatch
 api-version: 1.13
 authors: [ DeDiamondPro ]
 description: A simple, efficient plugin to catch x-rayers.
 softdepend: [DiscordSRV]
+folia-supported: true
 commands:
   xcatch:
     description: XCatch base command

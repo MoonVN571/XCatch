@@ -163,7 +163,7 @@ public class XCatchCommand implements CommandExecutor {
                     sender.sendMessage("§8[§cXCatch§8] §cCoordinates contain invalid argument.");
                     return false;
                 }
-                ((Player) sender).teleport(new Location(world, coordinates[0], coordinates[1], coordinates[2]));
+                ((Player) sender).teleportAsync(new Location(world, coordinates[0], coordinates[1], coordinates[2]));
                 return true;
         }
         sender.sendMessage("§8[§cXCatch§8] §cUnknown sub-command.");
